@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
   <form action="/skills" method="POST">
-    <input type="text" name="name">
-    <input type="text" name="type">
+    <p>Skill Name</p><input type="text" name="name">
+    <p>Skill Type</p><input type="text" name="type"><br>
+    <label>Learned<input type="checkbox" name="learned"></label><br>
     <button type="submit">Save Skill</button>
   </form>
 <%- include('../partials/footer') %>

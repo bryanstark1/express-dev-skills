@@ -1,43 +1,51 @@
 const skills = [
   {
     id: 1,
-    name: 'javascript',
-    type: 'language'
+    name: 'JavaScript',
+    type: 'language',
+    learned: true
   },
   {
     id: 2,
-    name: 'node.js',
-    type: 'framework'
+    name: 'Node.js',
+    type: 'framework',
+    learned: true
   },
   {
     id: 3,
-    name: 'express.js',
-    type: 'framework'
+    name: 'Express.js',
+    type: 'framework',
+    learned: true
   },
   {
     id: 4,
-    name: 'html',
-    type: 'language'
+    name: 'HTML',
+    type: 'language',
+    learned: true
   },
   {
     id: 5,
-    name: 'css',
-    type: 'language'
+    name: 'CSS',
+    type: 'language',
+    learned: true
   },
   {
     id: 6,
-    name: 'jquery',
-    type: 'framework'
+    name: 'JQuery',
+    type: 'framework',
+    learned: true
   },
   {
     id: 7,
-    name: 'git',
-    type: 'tool'
+    name: 'Git',
+    type: 'tool',
+    learned: true
   },
   {
     id: 8,
-    name: 'github',
-    type: 'service'
+    name: 'GitHub',
+    type: 'service',
+    learned: true
   }
 ];
 
@@ -61,9 +69,16 @@ const deleteOne = (id) => {
   skills.splice(idx, 1);
 };
 
+const update = (id, updatedSkill) => {
+  id = parseInt(id);
+  const skill = skills.find(skill => skill.id === id);
+  Object.assign(skill, updatedSkill);
+};
+
 module.exports = {
   getAll,
   getOne,
   create,
-  deleteOne
+  deleteOne,
+  update
 };
