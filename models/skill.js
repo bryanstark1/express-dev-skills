@@ -50,7 +50,13 @@ const getOne = (id) => {
   return skills.find(skill => skill.id === id);
 };
 
+const create = (newSkill) => {
+  newSkill.id = Date.now() & 1000000;
+  skills.push(newSkill);
+};
+
 module.exports = {
   getAll,
-  getOne
+  getOne,
+  create
 };

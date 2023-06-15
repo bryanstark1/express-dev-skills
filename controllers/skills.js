@@ -18,8 +18,14 @@ const newSkill = (req, res) => {
   res.render('skills/new', {title: 'New Skill'});
 };
 
+const create = (req, res) => {
+  Skill.create(req.body);
+  res.redirect('/skills');
+};
+
 module.exports = {
   index, 
   show,
-  new: newSkill
+  new: newSkill,
+  create
 };
