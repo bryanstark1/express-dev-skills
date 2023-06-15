@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Express Skills</title>
-  </head>
-  <body>
-    <a href="/skills">Skills List</a>
-    <h3><%= skills.name %></h3>
-    <h3>Type: <%= skills.type %></h3>
-</html>
+<%- include('../partials/header') %>
+  <a href="/skills">Skills List</a>
+  <h3><%= skills.name %></h3>
+  <h3>Type: <%= skills.type %></h3>
+<%- include('../partials/footer') %>
